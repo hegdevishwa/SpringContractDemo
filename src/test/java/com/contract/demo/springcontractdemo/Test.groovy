@@ -14,7 +14,8 @@ import static org.springframework.cloud.contract.spec.Contract.make
             body( 'tes': "\"escaped-body\"")
             headers {
                 contentType('application/json')
-                header('Escaped-Header', "\"escaped-header\"")
+                header('Escaped-Header',  '\"escaped-header\"')
+                header(contentDisposition(), 'attachment; filename="test.pdf"')
             }
         }
     }
